@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="xt.css">
+
+
+</head>
+<h1> Mc Neguin Ws  </h1>
+
+
+<body background="images.jpg"> 
+
+
+
+
+    <form>
+
+<div>
+<label> email </label>
+
+<input type="email" name="email"id="email"class="justy"onchange= "validatefields()">  
+
+</div>
+
+<div class="error"id="email-required-error" > email obrigatorio </div>
+
+<div class="error" > email invalido </div>
+
+
+
+<div>
+<label> senha </label>
+
+<input type="password" name="password"id="password" onchange="validatefields()"> 
+
+<div class="error"> senha obrigatoria </div> 
+
+<div>
+<button type="button" class="clear" disabled=" true" id="recover-password-button"> recuperar senha </button>
+
+</div>
+
+<div>
+<button type="submit" class="solid" disabled="true" id=" login-button"> Entrar </button>
+
+</div>
+ 
+<div>
+<button type="button" class="outiline"> registrar </button>
+</div>
+
+
+</form>
+    
+    
+</body>
+
+<!-- parte de email  recuperacao de email e validacao de codigo -->
+
+
+
+<script src="xt.js"> </script>
+
+
+    
+</html>
