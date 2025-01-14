@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran 2  </title>
+
+    <style>
+body{
+background-image: url('https://anoregrs.org.br/wp-content/uploads/2022/07/detran-rs-2021.png');
+background-size:1520pt;
+align-items: center;
+list-style: circle;
+
+}
+h1{
+margin-left: 450px;
+padding: 20px;
+font-family: italic;
+font-style: italic;
+font-size: 90pt;
+color:#5c4b44;
+background: rgb(254,114,0);
+background: linear-gradient(0deg, rgba(254,114,0,1) 0%, #eeeeed 100%);
+border: groove ;
+border-radius: 15px;
+border: solid 8px;
+border-color: #eeeeed;
+border-bottom: #ff7f50;
+cursor: pointer;
+}
+h1:hover{
+    opacity: 0.9;
+}
+.riven{
+margin-left: 200px;
+padding: 20px;
+font-size: large;
+}
+p{
+margin-left: 600px;
+font-size: 35pt;
+border:double;
+border-color: #eeeeed;
+background-color: transparent;
+width: 450px;
+margin-bottom: 20px;
+color: #000000;
+cursor: pointer;
+border-radius: 20px;
+padding: 10px;
+}
+p:hover{
+    opacity: 0.5;
+}
+.iner{
+color: rgb(255, 255, 255);
+background-color: transparent;
+border-color: transparent;
+justify-content: center;
+cursor: pointer;
+font-size: 30pt;
+border-radius: 20px;
+}
+.iner::before{
+    opacity: 0.7;
+}
+input#texto {
+    padding: 10px;
+    width: 200px;
+border-radius: 20px;
+border: solid 3px rgb(143, 139, 139);
+background:linear-gradient(0deg, rgba(254,114,0,1) 0%, #eeeeed 100%);
+}
+input#texto:hover{
+opacity: 0.9;
+
+}
+.ht{
+font-size: 25px;
+transition: transform 1.5s;
+}
+.ht:hover{
+    transform: scale(2);
+    opacity: 1.0;
+}
+.very{
+padding: 5px;
+width: 100px;
+border-radius: 15px;
+background-color: transparent;
+cursor: pointer;
+transition: transform 0.5s;
+}
+.very:hover{
+opacity: 1.0;
+transform: scale(1.5);
+
+
+}
+.pr{
+font-size: 25px;
+width: 500px;
+padding: 10px;
+transition: transform 2.5s;
+}
+.pr:hover{
+transform: scale(2);
+opacity: 1.0;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1> sitema de multas</h1>
+    <div class="riven">
+    <p>velocidade do veiculo </p> <input type="text" name="txtvel" id="texto"> Km/h
+    <input type="button" value="verificar" onclick="verificar()" class="very"> 
+    <div id="porti" ></div>
+    </div>   
+</body>
+
+<script>
+function verificar(){
+var text = window.document.getElementById('texto')
+var porti= window.document.getElementById('porti')
+var vel = Number(text.value)
+
+porti.innerHTML = `<p class = "iner"> ${vel} Km/h </p>`
+
+
+if ( vel < 40 ) {
+porti.innerHTML += `<p class = "ht"> abaixo do limite de  velocidade permitido na rodovia </p>`
+return;
+}
+if( vel > 80 ){
+    porti.innerHTML += `<p class = "pr"> acima do limite de velocidade permitido na rodovia </p> `
+    return;
+}
+
+
+} 
+</script>
+
+
+
+
+
+
+</html>
